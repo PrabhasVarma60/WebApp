@@ -1,0 +1,22 @@
+{%extends "blog/base.html"%}
+{%block content%}
+    <div class="content-section">
+        <div><h1>Login</h1></div>
+        <form method="POST">
+            {% csrf_token %}
+                {{form.as_p}}
+            <div >
+                <button style="margin-top:20px; background-color:white; border-color:#007BFF ; border-style:solid;border-width:1px;color:#007BFF"type="submit">Login</button>
+            </div>
+
+        </form>    
+        <div >
+           
+                Dont Have An Account? <a href="{% url 'register' %}">Sign Up</a>
+            
+        </div>
+
+
+
+    </div>
+{%endblock%}
