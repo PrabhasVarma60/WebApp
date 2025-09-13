@@ -10,16 +10,7 @@ from .forms import UserRegisterForm,UserUpdateForm,ProfileUpdateForm
 from .models import Profile
 from django.contrib.auth.decorators import login_required
 
-from django.contrib.admin.views.decorators import staff_member_required
 
-
-@staff_member_required
-def temp_create_profiles(request):
-    users_without_profiles = User.objects.filter(profile__isnull=True)
-    count = users_without_profiles.count()
-    for user in users_without_profiles:
-        Profile.objects.create(user=user)
-    return HttpResponse(f"Created {count} missing profiles.")
 
 
 
@@ -58,3 +49,4 @@ def profile(request):
 
 
 # Create your views here.
+
