@@ -1,3 +1,4 @@
+gunicorn==22.1.0
 Django==5.2.3
 Pillow==11.0.0
 asgiref==3.8.1
@@ -5,6 +6,7 @@ sqlparse==0.5.3
 tzdata==2025.2
 psycopg2-binary
 dj-database-url
+
 
 
 
