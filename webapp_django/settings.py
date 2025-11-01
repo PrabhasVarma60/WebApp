@@ -76,7 +76,7 @@ if 'DATABASE_URL' in os.environ:
     # This is for Production (on Render)
     DATABASES = {
         'default': dj_database_url.config(
-            conn_max_age=600,
+            conn_max_age=0,
             ssl_require=True
         )
     }
@@ -124,3 +124,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Auth redirects
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
+
